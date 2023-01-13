@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aagar <marvin@42quebec.com>                +#+  +:+       +#+        */
+/*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:31:16 by aagar             #+#    #+#             */
-/*   Updated: 2022/11/30 15:34:07 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/13 18:54:22 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
-
-/*int	main()
-{
-	char *str;
-	
-	str = "abcd";
-	printf("%d", ft_strlen(str));
-}*/

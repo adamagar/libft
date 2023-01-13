@@ -6,9 +6,11 @@
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 12:03:41 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/11 17:14:15 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/13 18:55:02 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h";
 
 int	ft_atoi(char *str)
 {
@@ -37,11 +39,3 @@ int	ft_atoi(char *str)
 	nb *= mult;
 	return (nb);
 }
-
-/*int		main(void)
-{
-	char	*str, *str2;
-
-	str = "      ----+---+++2300fesfss65+2";
-	printf("%d\n", ft_atoi(str));
-}*/
