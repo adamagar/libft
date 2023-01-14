@@ -6,21 +6,24 @@
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 20:49:48 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/13 18:54:51 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/14 18:36:24 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *tmp;
+	const unsigned char	*s;
+	unsigned char		*d;
 
-	tmp = (char *)malloc(sizeof(char) * len);
-	if (tmp == NULL)
-		return (NULL);
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
-	free(tmp);
+	if (!dst && !src)
+		return (dst);
+	if (dst < src)
+		return (ft_memcpy(dst, src, len));
+	s = (unsigned char *)src;
+	d = (unsigned char *)dst;
+	while (len--)
+		d[len] = s[len];
 	return (dst);
 }

@@ -6,13 +6,13 @@
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 18:46:23 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/13 18:54:56 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/14 17:21:07 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 128);
+	return (c >= 0 && c < 128);
 }

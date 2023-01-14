@@ -6,18 +6,18 @@
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 15:31:16 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/13 18:54:22 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/14 17:12:04 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
 		i++;
 	}

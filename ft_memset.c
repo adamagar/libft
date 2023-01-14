@@ -6,15 +6,15 @@
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:30:40 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/13 18:54:49 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/14 16:37:33 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char *p;
+	char	*p;
 
 	p = (char *)b;
 	while (len > 0)

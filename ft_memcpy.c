@@ -6,27 +6,22 @@
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 20:10:13 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/13 18:54:52 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/14 18:34:02 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	char *dst2;
-	char *src2;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	i = 0;
-	dst2 = (char *)dst;
-	src2 = (char *)src;
-	while (i < n)
-	{
-		dst2[i] = src2[i];
-		if ((unsigned char)src2[i] == (unsigned char)c)
-			return ((char *)dst + i + 1);
-		i++;
-	}
-	return (NULL);
+	if (!dst && !src)
+		return (dst);
+	d = dst;
+	s = src;
+	while (n-- > 0)
+		*d++ = *s++;
+	return (dst);
 }

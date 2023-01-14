@@ -1,18 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 18:00:06 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/14 16:23:13 by aagar            ###   ########.fr       */
+/*   Created: 2023/01/14 13:40:24 by aagar             #+#    #+#             */
+/*   Updated: 2023/01/14 16:37:33 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	return (c >= 48 && c <= 57);
+	int		i;
+	int		j;
+	int		k;
+	char	*str;
+
+	i = 0;
+	j = 0;
+	k = 0;
+	if (!s1 || !set)
+		return (NULL);
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	while (s1[i + j])
+		j++;
+	while (j > 0 && ft_strchr(set, s1[i + j - 1]))
+		j--;
+	str = (char *)malloc(sizeof(char) * (j + 1));
+	if (!str)
+		return (NULL);
+	while (k < j)
+		str[k++] = s1[i++];
+	str[k] = '\0';
+	return (str);
 }

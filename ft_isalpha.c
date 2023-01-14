@@ -6,11 +6,11 @@
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:53:43 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/13 18:54:58 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/14 16:23:13 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
