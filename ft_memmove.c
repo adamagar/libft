@@ -6,7 +6,7 @@
 /*   By: aagar <aagar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 20:49:48 by aagar             #+#    #+#             */
-/*   Updated: 2023/01/14 18:36:24 by aagar            ###   ########.fr       */
+/*   Updated: 2023/01/20 18:39:43 by aagar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,23 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	const unsigned char	*s;
 	unsigned char		*d;
+	const unsigned char	*s;
 
-	if (!dst && !src)
-		return (dst);
-	if (dst < src)
-		return (ft_memcpy(dst, src, len));
-	s = (unsigned char *)src;
 	d = (unsigned char *)dst;
-	while (len--)
-		d[len] = s[len];
+	s = (unsigned char *)src;
+	if (!d && !s)
+		return (dst);
+	if (d == s)
+		return (dst);
+	if (d < s)
+		return (ft_memcpy(dst, src, len));
+	else
+	{
+		d += len;
+		s += len;
+		while (len--)
+			*--d = *--s;
+	}
 	return (dst);
 }
